@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:id="@+id/container"
+    tools:context="com.example.user.bluetoothcamera.MainActivity">
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:name="com.example.user.bluetoothcamera.BlankFragment"
+        android:id="@+id/blank_fragment"
+        />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relativelayout"
+    >
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  android:scaleType="centerCrop"
+    android:src="@drawable/iphonex1"
+    />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trans_black"></RelativeLayout>
+<Button
+    android:layout_width="180dp"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="50dp"
+    android:text="Show Devices"
+    android:id="@+id/turnOn"
+    android:textStyle="bold"
+    android:textColor="#fff"
+    android:background="@drawable/button_resourse1"
+    android:onClick="bluetoothprompt"/>
+
+<Button
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/button_resourse1"
+    android:textColor="#fff"
+    android:textStyle="bold"
+    android:id="@+id/opencamera"
+    android:text="Open Camera"
+    android:layout_below="@+id/turnOn"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="20dp"
+    android:onClick="opencamera"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/recyclerview"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        ></android.support.v7.widget.RecyclerView>
+    <com.victor.loading.rotate.RotateLoading
+        android:id="@+id/elastic_download_view"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        />
+    <com.github.jlmd.animatedcircleloadingview.AnimatedCircleLoadingView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/circle_loading_view"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+
+        />
+
+
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/trans_white"
+        android:visibility="gone"
+        android:id="@+id/relativelayout2"
+        >
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/capture"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_resourse3"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
